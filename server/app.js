@@ -23,6 +23,7 @@ mongoose.connection.on('error',(err)=>{
 
 //WpD7tK1JEKqhs0kf
 
+// MIDDLEWARE: 
 /*const customMiddleware = (req,res,next)=>{
     console.log("middleware executed!!")
     next()
