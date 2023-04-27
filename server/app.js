@@ -4,10 +4,6 @@ const mongoose = require('mongoose')
 const {MONGOURI} = require('./keys')
 const PORT = 5000
 
-require('./model/user')
-
-app.use(express.json())
-app.use(require('./routes/auth'))
 
 mongoose.connect(MONGOURI/* ,{
     userNewUrlParser: true,
@@ -21,6 +17,12 @@ mongoose.connection.on('error',(err)=>{
     console.log("error connecting",err)
 })
 
+require('./model/user')
+require('./model/post')
+
+app.use(express.json())
+app.use(require('./routes/auth'))
+app.use(require('./routes/post'))
 //WpD7tK1JEKqhs0kf
 
 // MIDDLEWARE: 
