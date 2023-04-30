@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@300&display=swap');
+
+a{
+  color: black !important;
+}
+
+.brand-logo,h2{
+  font-family: 'Grand Hotel', cursive;
+}
+
+.mycard{
+  margin-top: 50px;
+}
+.auth-card{
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
+}
