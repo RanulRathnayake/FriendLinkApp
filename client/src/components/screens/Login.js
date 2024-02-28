@@ -33,7 +33,6 @@ const Login = () => {
             localStorage.setItem("user",JSON.stringify(data.user))
             dispatch({type:"USER",payload:data.user})
             M.toast({html:"Loggedin successfully",classes:"#43a047 green darken-1"})
-            console.log(data)
             navigate('/')
           }
         }).catch(err=>{
@@ -48,7 +47,7 @@ const Login = () => {
         <input type="text" placeholder="email" 
         value={email} onChange={(e)=>setEmail(e.target.value)}/>
 
-        <input type="text" placeholder="password" 
+        <input type="password" placeholder="password" 
         value={password} onChange={(e)=>setPassword(e.target.value)}/>
 
         <button className="btn waves-effect waves-light" onClick={PostData}>

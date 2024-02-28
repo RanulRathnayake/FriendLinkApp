@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from "react";
-
+//post must be latest to oldest. for that we need to save date that post was created....maybe later
 const Home = () => {
     const [data,setData] = useState([])
     useEffect(()=>{
@@ -9,7 +9,7 @@ const Home = () => {
             }
         }).then(res=>res.json())
         .then(result=>{
-            console.log(result)
+            /*console.log(result)*/
             setData(result.posts)
         })
     },[])
