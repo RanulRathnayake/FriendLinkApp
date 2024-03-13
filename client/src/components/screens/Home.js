@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
 //post must be latest to oldest. for that we need to save date that post was created....maybe later
+
 const Home = () => {
     const [data,setData] = useState([])
     useEffect(()=>{
@@ -9,7 +10,7 @@ const Home = () => {
             }
         }).then(res=>res.json())
         .then(result=>{
-            /*console.log(result)*/
+            /* console.log(result) */
             setData(result.posts)
         })
     },[])
@@ -25,14 +26,17 @@ const Home = () => {
                                 alt="friend"/>
                         </div>
                         <div className="card-content">
-                            <i className="material-icons" style={{ color: "red" }}>
-                                favorite
+                            <i className="material-icons" style={{ color: "black"}}>
+                            favorite_border
                             </i>
-                            <h6>{item.title}</h6>
+                            <i className="material-icons" style={{ color: "red" , display:"none"}}>
+                            favorite
+                            </i>
+                            <h6>{item.like.length} Like</h6>
                             <p>{item.body}</p>
                             <input type="text" placeholder="add a comment" />
                         </div>
-        </div>
+                    </div>
                 )
             })
         }
